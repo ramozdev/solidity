@@ -52,11 +52,9 @@ https://papers.christopherfrantz.org/pdf/FrantzNowostawski2016_Smart_Contracts_n
 
 ---
 
-## Medium 
+## Medium
 
-https://medium.com/get-protocol/update-february-19-6652f95efac5
-
-https://medium.com/tokenfoundry/a-solidity-implementation-of-the-state-machine-design-pattern-25de8b1dfbc5
+**Example Question And Answer workflow between Data Owner and Data Requester**
 
 https://medium.com/coinmonks/state-machines-in-solidity-9e2d8a6d7a11
 
@@ -67,6 +65,8 @@ https://medium.com/coinmonks/state-machines-in-solidity-9e2d8a6d7a11
 https://en.wikipedia.org/wiki/Automata-based_programming
 
 https://en.wikipedia.org/wiki/Dataflow_programming
+
+https://en.wikipedia.org/wiki/Formal_verification
 
 ---
 
@@ -88,3 +88,11 @@ https://solidity-by-example.org/
 
 https://loiluu.com/papers/oyente.pdf
 
+
+---
+
+https://medium.com/kadena-io/safer-smarter-contracts-with-pact-e86b9ccaca9f
+
+[Pact](https://github.com/kadena-io/pact) is an open-source, Turing-incomplete smart contract language that has been purpose-built with blockchains first in mind.
+
+Recursion and infinite loops are not allowed in Pact because it is Turing incomplete.

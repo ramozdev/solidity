@@ -9,7 +9,7 @@ contract Events {
     event AnotherLog();
 
     function emitEvents() public {
-        emit Log(msg.sender, 'Hello Decentralized World!');
+        emit Log(msg.sender, "Hello Decentralized World!");
         emit AnotherLog();
     }
 }

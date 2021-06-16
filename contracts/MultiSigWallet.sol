@@ -204,3 +204,16 @@ contract MultiSigWallet {
         return transactions.length;
     }
 }
+
+contract TestContract {
+    uint public i;
+
+    function callMe(uint j) public {
+        i += j;
+    }
+
+    /// @notice Helper function to get data in hex format to call 'callMe' function
+    function getData() public pure returns (bytes memory) {
+        return abi.encodeWithSignature("callMe(uint256)", 123);
+    }
+}

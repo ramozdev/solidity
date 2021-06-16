@@ -1,4 +1,6 @@
-const { expect } = require('chai')
+const chai = require('chai')
+chai.use(require('chai-as-promised'))
+const { expect } = chai
 
 describe('Errors', () => {
   before(async () => {
@@ -6,18 +8,8 @@ describe('Errors', () => {
     errors = await Errors.deploy()
   })
 
-  async function expectThrowsAsync(method) {
-    let error = null
-    try {
-      await method()
-    } catch (err) {
-      error = err
-    }
-    expect(error).to.be.an('Error')
-  }
-
   it('testRequire() fails as expected', async () => {
-    expect(`${await errors.testRequire(100)}`).equals('')
-    await expectThrowsAsync(() => errors.testRequire(1))
+    expect(`${await errors.testRequire(100)}`).to.equal('')
+    await expect(errors.testRequire(1)).to.be.rejected
   })
 })

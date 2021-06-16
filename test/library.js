@@ -1,4 +1,6 @@
-const { expect } = require('chai')
+const chai = require('chai')
+chai.use(require('chai-as-promised'))
+const { expect } = chai
 
 describe('Libraries', () => {
   before(async () => {
@@ -8,17 +10,7 @@ describe('Libraries', () => {
     // testArray = await TestArray.deploy()
   })
 
-  async function expectThrowsAsync(method) {
-    let error = null
-    try {
-      await method()
-    } catch (err) {
-      error = err
-    }
-    expect(error).to.be.an('Error')
-  }
-
   it('Runs safe math', async () => {
-    await expectThrowsAsync(() => testSafeMath.testAdd(2))
+    expect(testSafeMath.testAdd(2)).to.be.ok
   })
 })
